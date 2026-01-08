@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+client/node_modules/
+functions/node_modules/
+inex/node_modules/
+
+# Build outputs
+dist/
+dist-admin/
+dist/client/
+build/
+
+# Database files (local only)
+*.db
+*.db-journal
+dev.db
+prisma/dev.db
+
+# Environment variables
+.env
+.env.local
+
+# Storage (will use cloud storage in production)
+storage/pdfs/*.pdf
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Android build files
+client/android-driver/
+client/android-admin/
+*.apk
+*.aab
+
+# Firebase
+.firebase/
+firebase-debug.log
+dataconnect/
+
+# Temporary files
+*.tmp
+*.temp
