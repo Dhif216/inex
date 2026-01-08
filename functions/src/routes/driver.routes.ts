@@ -132,7 +132,7 @@ router.post('/confirm-loaded/:id', async (req: Request, res: Response) => {
     }
 
     // Generate QR code
-    const qrCode = await qrService.generateQRCode(id, pickup.referenceNumber);
+    const qrCode = await qrService.generateQRCode(pickup.referenceNumber);
 
     // Update pickup with loading end time first (without PDF yet)
     const updatedPickupTemp = await pickupService.confirmDriverLoaded(id, qrCode, '');

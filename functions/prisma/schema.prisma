@@ -1,0 +1,39 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"  // Changed from sqlite for production
+  url      = env("DATABASE_URL")
+}
+
+model Pickup {
+  id               String   @id @default(uuid())
+  referenceNumber  String   @unique
+  company          String
+  scheduledDate    DateTime
+  goodsDescription String
+  quantity         Int?
+  status           String   @default("PENDING")
+  truckPlate       String?
+  trailerNumber    String?
+  driverName       String?
+  driverCompany    String?
+  destination      String?
+  pickupLocation   String?
+  imageUrl         String?
+  loadingStartTime DateTime?
+  loadingEndTime   DateTime?
+  qrCode           String?
+  outlookEventId   String?  @unique
+  pdfPath          String?
+  notes            String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([referenceNumber])
+  @@index([scheduledDate])
+  @@index([status])
+}
