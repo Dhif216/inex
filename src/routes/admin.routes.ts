@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { PickupService } from '../services/pickup.service';
-import { PDFService } from '../services/pdf.service';
+import { PickupService } from '../services/pickup.service.js';
+import { PDFService } from '../services/pdf.service.js';
 
 const router = Router();
 const pickupService = new PickupService();

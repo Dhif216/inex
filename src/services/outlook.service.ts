@@ -1,5 +1,5 @@
-import { getGraphClient, getGraphConfig } from '../config/graph';
-import { prisma } from '../config/database';
+import { getGraphClient, getGraphConfig } from '../config/graph.js';
+import { prisma } from '../config/database.js';
 import { Event } from '@microsoft/microsoft-graph-types';
 
 export interface OutlookEvent {

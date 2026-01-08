@@ -4,9 +4,9 @@ import * as dotenv from 'dotenv';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import driverRoutes from './routes/driver.routes';
-import adminRoutes from './routes/admin.routes';
-import syncRoutes from './routes/sync.routes';
+import driverRoutes from './routes/driver.routes.js';
+import adminRoutes from './routes/admin.routes.js';
+import syncRoutes from './routes/sync.routes.js';
 
 // ES module __dirname equivalent
 const __filename = fileURLToPath(import.meta.url);

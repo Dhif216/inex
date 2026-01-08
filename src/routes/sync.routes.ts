@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { OutlookSyncService } from '../services/outlook.service';
+import { OutlookSyncService } from '../services/outlook.service.js';
 
 const router = Router();
 const outlookService = new OutlookSyncService();
